@@ -1,0 +1,107 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if dein#util#_is_windows()
+    let cmd = 'tools\\update-dll-mingw'
+  elseif dein#util#_is_cygwin()
+    let cmd = 'make -f make_cygwin.mak'
+  elseif executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+
+[[plugins]]
+repo = 'elzr/vim-json'
+if   = '''! has('kaoriya')'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+#[[plugins]] # カラースキーマ
+#repo = 'jonathanfilip/vim-lucius'
+#hook_add = '''
+#  set background=dark
+#  au MyAutoCmd VimEnter * nested colorscheme hybrid
+#'''
+[[plugins]] # カラースキーマ
+repo = 'vim-scripts/Lucius'
+#repo = 'aereal/vim-colors-japanesque'
+
+[[plugins]] # カラースキーマ
+repo = 'aereal/vim-colors-japanesque'
+
+[[plugins]] # カラースキーマ
+repo = 'alessandroyorba/alduin'
+
+[[plugins]] # カラースキーマ
+repo = 'romainl/apprentice'
+
+[[plugins]] # カラースキーマ
+repo = 'jeetsukumaran/vim-nefertiti'
+
+[[plugins]] # カラースキーマ
+repo = 'tyrannicaltoucan/vim-quantum'
+
+[[plugins]] # カラースキーマ
+repo = 'KeitaNakamura/neodark.vim'
+
+[[plugins]]
+repo = 'vim-scripts/Wombat'
+
+[[plugins]]
+repo = 'scrooloose/syntastic.git'
+
+[[plugins]]
+repo =  'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]]
+repo = 'Yggdroot/indentline'
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+on_ft = ['rst', 'md']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_path = '.*'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_path = '.*'
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = 'python'

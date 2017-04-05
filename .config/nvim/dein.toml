@@ -105,3 +105,13 @@ on_path = '.*'
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['md']

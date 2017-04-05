@@ -3,9 +3,6 @@
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -nle 'm!dotfiles/(.+)$! and print $1'`; do
-    [[ file == '.config*' ]] && continue
-    [[ file == '.git' ]] && continue
-    [[ file == '.DS_Store*' ]] && continue
     ln -s -f $HOME/dotfiles/$file $HOME/$file
 done
 

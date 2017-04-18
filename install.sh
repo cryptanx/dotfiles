@@ -12,9 +12,10 @@ sudo apt-get install -y tig
 sudo apt-get install -y software-properties-common
 sudo apt-get install -y python-software-properties
 
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update -y
 sudo apt-get install -y neovim
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip
+sudo pip3 install neovim
 
 echo "Finished install!"

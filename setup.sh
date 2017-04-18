@@ -6,9 +6,10 @@ for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -n
     ln -s -f $HOME/dotfiles/$file $HOME/$file
 done
 
-ln -s -f $HOME/dotfiles/.config/nvim/init.vim $HOME/.config/nvim/init.vim
-ln -s -f $HOME/dotfiles/.config/nvim/dein.toml $HOME/.config/nvim/dein.toml
-ln -s -f $HOME/dotfiles/.config/nvim/dein_lazy.toml $HOME/.config/nvim/dein_lazy.toml
+sudo mkdir -p ~/.config/nvim
+ln -s -f ~/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s -f ~/dotfiles/dein.toml ~/.config/nvim/dein.toml
+ln -s -f ~/dotfiles/dein_lazy.toml ~/.config/nvim/dein_lazy.toml
 
 chsh -s $(which zsh)
 

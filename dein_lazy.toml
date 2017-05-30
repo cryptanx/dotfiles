@@ -69,12 +69,5 @@ repo = 'thinca/vim-quickrun'
 repo = 'ervandew/supertab'
 
 [[plugins]]
-description = 'F# support for Vim'
-repo = 'fsharp/vim-fsharp'
-lazy = 1
-on_ft = 'fsharp'
-build = 'make fsautocomplete'
-
-[[plugins]]
 repo = 'tyru/open-browser.vim'
 on_map = ['<Plug>(openbrowser-smart-search)']

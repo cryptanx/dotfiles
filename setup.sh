@@ -13,4 +13,9 @@ ln -s -f ~/dotfiles/dein_lazy.toml ~/.config/nvim/dein_lazy.toml
 
 chsh -s $(which zsh)
 
+# setting gnome-terminal colorcsheme
+git clone https://github.com/denysdovhan/oceanic-next-gnome-terminal
+cd oceanic-next-gnome-scheme
+sudo ./oceanic-next.bash
+
 echo "Finished setup!"

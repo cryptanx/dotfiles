@@ -209,61 +209,6 @@ autocmd FileType * setlocal formatoptions-=ro
 "zencoding
 let g:user_zen_expandabbr_key = '<c-r>'
 
-"*****************************************************************************"
-"NeoBundle.vimのプラグイン
-"filetype off
-"set nocompatible " be iMproved
-"if has('vim_starting')
-"  set runtimepath+=~/.vim/bundle/neobundle.vim
-"    call neobundle#begin(expand('~/.vim/bundle/'))
-"endif
-"
-"NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'Shougo/neocomplete.vim'
-"NeoBundle 'itchyny/lightline.vim'
-"NeoBundle 'Shougo/vimfiler.vim'
-"NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'Shougo/neomru.vim'
-"NeoBundle 'osyo-manga/vim-over'
-"NeoBundle 'Shougo/neosnippet.git'
-"NeoBundle 'Shougo/neosnippet-snippets'
-"NeoBundle 'tpope/vim-surround'
-"NeoBundle 'Shougo/vimshell'
-"NeoBundle 'Shougo/vimproc', {
-"            \ 'build' : {
-"            \ 'windows' : 'make -f make_mingw32.mak',
-"            \ 'cygwin' : 'make -f make_cygwin.mak',
-"            \ 'mac' : 'make -f make_mac.mak',
-"            \ 'unix' : 'make -f make_unix.mak',
-"            \ },
-"            \ }
-""NeoBundle 'Align'
-"NeoBundle 'junegunn/vim-easy-align'
-"NeoBundle 'Yggdroot/indentLine'
-"NeoBundle 'Shougo/unite-outline'
-"NeoBundle 'hynek/vim-python-pep8-indent'
-"NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'jonathanfilip/vim-lucius'
-"
-"" jedi-vim
-""NeoBundle 'davidhalter/jedi-vim'
-""let g:jedi#popup_on_dot = 1
-"NeoBundleLazy "davidhalter/jedi-vim", {
-"            \ "autoload": {
-"            \   "filetypes": ["python", "python3", "djangohtml"],
-"            \ },
-"            \ "build": {
-"            \   "mac": "pip install jedi",
-"            \   "unix": "pip install jedi",
-"            \ }}
-"
-"" if_luaが有効ならneocompleteを使う
-"NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
-"
-"call neobundle#end()
-"filetype plugin indent on
-"*****************************************************************************"
-
 
 "python用設定
 autocmd FileType python setl autoindent
@@ -453,6 +398,7 @@ endif
 
 "jediとneocomplete
 autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#force_py_version=3
 let g:jedi#popup_select_first=0
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0

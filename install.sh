@@ -6,6 +6,8 @@ sudo apt-get install -y zsh
 sudo apt-get install -y tmux 
 sudo apt-get install -y git 
 sudo apt-get install -y tig 
+sudo apt-get install -y ruby 
+sudo gem install hub
 
 
 # install neovim

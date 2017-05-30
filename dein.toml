@@ -102,9 +102,14 @@ on_path = '.*'
 repo = 'Shougo/neosnippet.vim'
 on_path = '.*'
 
+#[[plugins]]
+#repo = 'davidhalter/jedi-vim'
+#on_ft = 'python'
+
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
+repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
+
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'

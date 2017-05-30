@@ -96,9 +96,20 @@ precmd () {
   LANG=en_US.UTF-8 vcs_info
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
+
+# Color Settings
+autoload -U colors
+colors
+
 #RPROMPT="%1(v|%F{blue}%1v%f|)"
 # ログイン名
-PROMPT='[%F{magenta}%B%n%b%f@%F{blue}%U%m%u%f:%d]# '
+#  <- Ctrl + v + esc 
+# %{[38;5;38m%} <- color setting
+# http://misc.flogisoft.com/bash/tip_colors_and_formatting
+#PROMPT='[%F%{[38;5;38m%}%n%f@%F%{[38;5;208m%}%U%m%u%f:%d]# '
+PROMPT='[%F%{[38;5;38m%}%m%f@%F%{[38;5;208m%}%U(oゝω･o)ﾉ☆ﾟ.*･｡ﾟ%u%f:%d]# '
+
+#PROMPT='[%F{magenta}%B%n%b%f@%F{blue}%U%m%u%f:%d]# '
 PROMPT+='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 
@@ -118,13 +129,9 @@ export SDL_VIDEODRIVER=X11
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
-# Color Settings
-autoload -U colors
-colors
-
 ## ls
-export LSCOLORS=exfxcxdxbxegedabagacad
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+#export LSCOLORS=exfxcxdxbxegedabagacad
+#export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 alias gls="gls --color"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
@@ -218,3 +225,5 @@ fi
 alias vim="nvim"
 alias tmux="tmux -2"
 alias pbcopy="xsel --clipboard --input"
+
+export PATH=~/.local/bin:$PATH  
